@@ -1,8 +1,7 @@
 const customPortalTemplate = '#CustomerPortalTemplate';
 const user = require('../fixtures/user.json');
-const nodemailer = require('nodemailer');
 
-describe('Authentication flow', function() {
+describe('Authentication flow', function () {
   beforeEach(() => {
     cy.fixture('user').as('user');
   });
@@ -37,29 +36,16 @@ describe('Authentication flow', function() {
       .find('[type="submit"]')
       .click()
       .should('be.visible');
-      //cy.screenshot()
 
     cy.url().should('include', '/s/');
     cy.wait(3000);
-    cy.screenshot()
+    cy.screenshot();
 
     cy.get(customPortalTemplate)
       .find('.card-body')
       .find('button.edd-btn')
       .first()
-      .click()
-   
-    
-    });
-  //   after(() => {
-  //     cy.sendEmail();
-  // });  
+      .click();
+    cy.screenshot();
+  });
 });
-
-
-    // cy.get(customPortalTemplate)
-    //   .find('.card-body')
-    //   .find('button.edd-btn')
-    //   .first()
-    //   .click()
-    // cy.go('back')

@@ -115,6 +115,8 @@
     "mime-types": "^2.1.35",
     "mimic-fn": "^2.1.0",
     "minimist": "^1.2.8",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
     "ms": "^2.1.2",
     "nodemailer": "^6.9.13",
     "npm-run-path": "^4.0.1",
@@ -176,6 +178,7 @@
   },
   "devDependencies": {
     "cypress": "^13.8.0",
-    "cypress-iframe": "^1.0.1"
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.8.2"
   }
 }
