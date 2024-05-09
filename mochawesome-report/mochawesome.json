@@ -1,0 +1,288 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 9,
+    "passes": 0,
+    "pending": 0,
+    "failures": 9,
+    "start": "2024-05-08T21:50:37.113Z",
+    "end": "2024-05-08T21:50:43.667Z",
+    "duration": 6554,
+    "testsRegistered": 9,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a571cd09-c81a-4fbf-ba95-7639839df6cd",
+      "title": "",
+      "fullFile": "cypress\\e2e\\T1_Health_check.cy.js",
+      "file": "cypress\\e2e\\T1_Health_check.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "274c0362-9f76-4c35-b0c7-59ac98e148ac",
+          "title": "Authentication flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_uioperfrf_1/0oa6gzocirj1qKD7y1d7/aln6gzujbuXliKiEc1d7",
+              "fullTitle": "Authentication flow Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_uioperfrf_1/0oa6gzocirj1qKD7y1d7/aln6gzujbuXliKiEc1d7",
+              "timedOut": null,
+              "duration": 1253,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\T1_Health_check.cy.js\\\\Authentication flow -- Login test for httpst1myedd.edd.ca.govsscploginlanguage=en_UShomecaeddicamext_uioperfrf_10oa6gzocirj1qKD7y1d7aln6gzujbuXliKiEc1d7 (failed).png\"\n    ]\n  ]\n}",
+              "code": "login(url);\ncy.wait(15000).screenshot(url.substring(url.lastIndexOf('/') + 1).replaceAll('_', ' '));\ncy.request(url).then(response => {\n  expect(response.status).to.eq(200);\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_uioperfrf_1/0oa6gzocirj1qKD7y1d7/aln6gzujbuXliKiEc1d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_uioperfrf_1/0oa6gzocirj1qKD7y1d7/aln6gzujbuXliKiEc1d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131061:76)\n    at visitFailedByErr (http://localhost:60728/__cypress/runner/cypress_runner.js:130475:12)\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131044:13)\n    at tryCatcher (http://localhost:60728/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:60728/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:60728/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:60728/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:60728/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:60728/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:60728/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at login (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:19:7)\n    at Context.eval (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:49:6)",
+                "diff": null
+              },
+              "uuid": "804ff443-c0eb-4caf-afd0-f806e5c3f00b",
+              "parentUUID": "274c0362-9f76-4c35-b0c7-59ac98e148ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_sdioextpp1_1/0oa6ge8hos514f7PF1d7/aln6gekjvaRs1RXnR1d7",
+              "fullTitle": "Authentication flow Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_sdioextpp1_1/0oa6ge8hos514f7PF1d7/aln6gekjvaRs1RXnR1d7",
+              "timedOut": null,
+              "duration": 555,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\T1_Health_check.cy.js\\\\Authentication flow -- Login test for httpst1myedd.edd.ca.govsscploginlanguage=en_UShomecaeddicamext_sdioextpp1_10oa6ge8hos514f7PF1d7aln6gekjvaRs1RXnR1d7 (failed).png\"\n    ]\n  ]\n}",
+              "code": "login(url);\ncy.wait(15000).screenshot(url.substring(url.lastIndexOf('/') + 1).replaceAll('_', ' '));\ncy.request(url).then(response => {\n  expect(response.status).to.eq(200);\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_sdioextpp1_1/0oa6ge8hos514f7PF1d7/aln6gekjvaRs1RXnR1d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_sdioextpp1_1/0oa6ge8hos514f7PF1d7/aln6gekjvaRs1RXnR1d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131061:76)\n    at visitFailedByErr (http://localhost:60728/__cypress/runner/cypress_runner.js:130475:12)\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131044:13)\n    at tryCatcher (http://localhost:60728/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:60728/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:60728/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:60728/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:60728/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:60728/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:60728/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at login (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:19:7)\n    at Context.eval (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:49:6)",
+                "diff": null
+              },
+              "uuid": "c1028886-ab1b-43c9-9ffd-6072188f8f9c",
+              "parentUUID": "274c0362-9f76-4c35-b0c7-59ac98e148ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_uiostgrf_1/0oa6gj2jlz4J3AlIE1d7/aln6gj88wtdBQHuBn1d7",
+              "fullTitle": "Authentication flow Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_uiostgrf_1/0oa6gj2jlz4J3AlIE1d7/aln6gj88wtdBQHuBn1d7",
+              "timedOut": null,
+              "duration": 941,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\T1_Health_check.cy.js\\\\Authentication flow -- Login test for httpst1myedd.edd.ca.govsscploginlanguage=en_UShomecaeddicamext_uiostgrf_10oa6gj2jlz4J3AlIE1d7aln6gj88wtdBQHuBn1d7 (failed).png\"\n    ]\n  ]\n}",
+              "code": "login(url);\ncy.wait(15000).screenshot(url.substring(url.lastIndexOf('/') + 1).replaceAll('_', ' '));\ncy.request(url).then(response => {\n  expect(response.status).to.eq(200);\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_uiostgrf_1/0oa6gj2jlz4J3AlIE1d7/aln6gj88wtdBQHuBn1d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_uiostgrf_1/0oa6gj2jlz4J3AlIE1d7/aln6gj88wtdBQHuBn1d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131061:76)\n    at visitFailedByErr (http://localhost:60728/__cypress/runner/cypress_runner.js:130475:12)\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131044:13)\n    at tryCatcher (http://localhost:60728/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:60728/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:60728/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:60728/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:60728/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:60728/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:60728/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at login (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:19:7)\n    at Context.eval (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:49:6)",
+                "diff": null
+              },
+              "uuid": "7ae3fc72-8f06-4e02-96df-44c70b569f0c",
+              "parentUUID": "274c0362-9f76-4c35-b0c7-59ac98e148ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_sdioextpp3_1/0oa6gj5iv0RV7oEyp1d7/aln6gj9fd8WVMSdBa1d7",
+              "fullTitle": "Authentication flow Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_sdioextpp3_1/0oa6gj5iv0RV7oEyp1d7/aln6gj9fd8WVMSdBa1d7",
+              "timedOut": null,
+              "duration": 582,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\T1_Health_check.cy.js\\\\Authentication flow -- Login test for httpst1myedd.edd.ca.govsscploginlanguage=en_UShomecaeddicamext_sdioextpp3_10oa6gj5iv0RV7oEyp1d7aln6gj9fd8WVMSdBa1d7 (failed).png\"\n    ]\n  ]\n}",
+              "code": "login(url);\ncy.wait(15000).screenshot(url.substring(url.lastIndexOf('/') + 1).replaceAll('_', ' '));\ncy.request(url).then(response => {\n  expect(response.status).to.eq(200);\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_sdioextpp3_1/0oa6gj5iv0RV7oEyp1d7/aln6gj9fd8WVMSdBa1d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_sdioextpp3_1/0oa6gj5iv0RV7oEyp1d7/aln6gj9fd8WVMSdBa1d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131061:76)\n    at visitFailedByErr (http://localhost:60728/__cypress/runner/cypress_runner.js:130475:12)\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131044:13)\n    at tryCatcher (http://localhost:60728/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:60728/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:60728/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:60728/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:60728/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:60728/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:60728/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at login (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:19:7)\n    at Context.eval (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:49:6)",
+                "diff": null
+              },
+              "uuid": "0427d534-9291-41cd-a4a3-a76bb26c79b1",
+              "parentUUID": "274c0362-9f76-4c35-b0c7-59ac98e148ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_sdioextpp4_1/0oa6gpqzu4lcnNeKc1d7/aln6gpsgb1OQOSYis1d7",
+              "fullTitle": "Authentication flow Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_sdioextpp4_1/0oa6gpqzu4lcnNeKc1d7/aln6gpsgb1OQOSYis1d7",
+              "timedOut": null,
+              "duration": 616,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\T1_Health_check.cy.js\\\\Authentication flow -- Login test for httpst1myedd.edd.ca.govsscploginlanguage=en_UShomecaeddicamext_sdioextpp4_10oa6gpqzu4lcnNeKc1d7aln6gpsgb1OQOSYis1d7 (failed).png\"\n    ]\n  ]\n}",
+              "code": "login(url);\ncy.wait(15000).screenshot(url.substring(url.lastIndexOf('/') + 1).replaceAll('_', ' '));\ncy.request(url).then(response => {\n  expect(response.status).to.eq(200);\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_sdioextpp4_1/0oa6gpqzu4lcnNeKc1d7/aln6gpsgb1OQOSYis1d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_sdioextpp4_1/0oa6gpqzu4lcnNeKc1d7/aln6gpsgb1OQOSYis1d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131061:76)\n    at visitFailedByErr (http://localhost:60728/__cypress/runner/cypress_runner.js:130475:12)\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131044:13)\n    at tryCatcher (http://localhost:60728/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:60728/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:60728/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:60728/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:60728/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:60728/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:60728/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at login (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:19:7)\n    at Context.eval (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:49:6)",
+                "diff": null
+              },
+              "uuid": "513a3a3c-4751-46c4-97df-2a78c4e81490",
+              "parentUUID": "274c0362-9f76-4c35-b0c7-59ac98e148ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_eservicespp_2/0oa6h15sjidDLXZ001d7/aln6h18rjmGKwGPuj1d7",
+              "fullTitle": "Authentication flow Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_eservicespp_2/0oa6h15sjidDLXZ001d7/aln6h18rjmGKwGPuj1d7",
+              "timedOut": null,
+              "duration": 556,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\T1_Health_check.cy.js\\\\Authentication flow -- Login test for httpst1myedd.edd.ca.govsscploginlanguage=en_UShomecaeddicamext_eservicespp_20oa6h15sjidDLXZ001d7aln6h18rjmGKwGPuj1d7 (failed).png\"\n    ]\n  ]\n}",
+              "code": "login(url);\ncy.wait(15000).screenshot(url.substring(url.lastIndexOf('/') + 1).replaceAll('_', ' '));\ncy.request(url).then(response => {\n  expect(response.status).to.eq(200);\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_eservicespp_2/0oa6h15sjidDLXZ001d7/aln6h18rjmGKwGPuj1d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_eservicespp_2/0oa6h15sjidDLXZ001d7/aln6h18rjmGKwGPuj1d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131061:76)\n    at visitFailedByErr (http://localhost:60728/__cypress/runner/cypress_runner.js:130475:12)\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131044:13)\n    at tryCatcher (http://localhost:60728/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:60728/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:60728/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:60728/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:60728/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:60728/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:60728/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at login (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:19:7)\n    at Context.eval (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:49:6)",
+                "diff": null
+              },
+              "uuid": "7cc53cb2-2fc4-4665-b899-f8dd02e6334f",
+              "parentUUID": "274c0362-9f76-4c35-b0c7-59ac98e148ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_uiouatrf_1/0oa6h0zy2p9Rkyh621d7/aln6h166wwvHkVgGF1d7",
+              "fullTitle": "Authentication flow Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_uiouatrf_1/0oa6h0zy2p9Rkyh621d7/aln6h166wwvHkVgGF1d7",
+              "timedOut": null,
+              "duration": 575,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\T1_Health_check.cy.js\\\\Authentication flow -- Login test for httpst1myedd.edd.ca.govsscploginlanguage=en_UShomecaeddicamext_uiouatrf_10oa6h0zy2p9Rkyh621d7aln6h166wwvHkVgGF1d7 (failed).png\"\n    ]\n  ]\n}",
+              "code": "login(url);\ncy.wait(15000).screenshot(url.substring(url.lastIndexOf('/') + 1).replaceAll('_', ' '));\ncy.request(url).then(response => {\n  expect(response.status).to.eq(200);\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_uiouatrf_1/0oa6h0zy2p9Rkyh621d7/aln6h166wwvHkVgGF1d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_uiouatrf_1/0oa6h0zy2p9Rkyh621d7/aln6h166wwvHkVgGF1d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131061:76)\n    at visitFailedByErr (http://localhost:60728/__cypress/runner/cypress_runner.js:130475:12)\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131044:13)\n    at tryCatcher (http://localhost:60728/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:60728/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:60728/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:60728/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:60728/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:60728/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:60728/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at login (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:19:7)\n    at Context.eval (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:49:6)",
+                "diff": null
+              },
+              "uuid": "a044f988-00ca-4117-8b91-76d4fe0d1524",
+              "parentUUID": "274c0362-9f76-4c35-b0c7-59ac98e148ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_sdioextpp2_1/0oa6grr1wtBFQOAri1d7/aln6grrzu18k4qRTS1d7",
+              "fullTitle": "Authentication flow Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_sdioextpp2_1/0oa6grr1wtBFQOAri1d7/aln6grrzu18k4qRTS1d7",
+              "timedOut": null,
+              "duration": 555,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\T1_Health_check.cy.js\\\\Authentication flow -- Login test for httpst1myedd.edd.ca.govsscploginlanguage=en_UShomecaeddicamext_sdioextpp2_10oa6grr1wtBFQOAri1d7aln6grrzu18k4qRTS1d7 (failed).png\"\n    ]\n  ]\n}",
+              "code": "login(url);\ncy.wait(15000).screenshot(url.substring(url.lastIndexOf('/') + 1).replaceAll('_', ' '));\ncy.request(url).then(response => {\n  expect(response.status).to.eq(200);\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_sdioextpp2_1/0oa6grr1wtBFQOAri1d7/aln6grrzu18k4qRTS1d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_sdioextpp2_1/0oa6grr1wtBFQOAri1d7/aln6grrzu18k4qRTS1d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131061:76)\n    at visitFailedByErr (http://localhost:60728/__cypress/runner/cypress_runner.js:130475:12)\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131044:13)\n    at tryCatcher (http://localhost:60728/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:60728/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:60728/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:60728/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:60728/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:60728/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:60728/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at login (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:19:7)\n    at Context.eval (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:49:6)",
+                "diff": null
+              },
+              "uuid": "31df2674-82b8-4790-af04-72df4e09d903",
+              "parentUUID": "274c0362-9f76-4c35-b0c7-59ac98e148ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_eservicest1_1/0oa6l8t34kRcwsiSE1d7/aln6l9di1qJKd3QF81d7",
+              "fullTitle": "Authentication flow Login test for https://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_eservicest1_1/0oa6l8t34kRcwsiSE1d7/aln6l9di1qJKd3QF81d7",
+              "timedOut": null,
+              "duration": 575,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\T1_Health_check.cy.js\\\\Authentication flow -- Login test for httpst1myedd.edd.ca.govsscploginlanguage=en_UShomecaeddicamext_eservicest1_10oa6l8t34kRcwsiSE1d7aln6l9di1qJKd3QF81d7 (failed).png\"\n    ]\n  ]\n}",
+              "code": "login(url);\ncy.wait(15000).screenshot(url.substring(url.lastIndexOf('/') + 1).replaceAll('_', ' '));\ncy.request(url).then(response => {\n  expect(response.status).to.eq(200);\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_eservicest1_1/0oa6l8t34kRcwsiSE1d7/aln6l9di1qJKd3QF81d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://t1myedd.edd.ca.gov/s/scplogin?language=en_US/home/caeddicamext_eservicest1_1/0oa6l8t34kRcwsiSE1d7/aln6l9di1qJKd3QF81d7\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131061:76)\n    at visitFailedByErr (http://localhost:60728/__cypress/runner/cypress_runner.js:130475:12)\n    at <unknown> (http://localhost:60728/__cypress/runner/cypress_runner.js:131044:13)\n    at tryCatcher (http://localhost:60728/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:60728/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:60728/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:60728/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:60728/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:60728/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:60728/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:60728/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at login (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:19:7)\n    at Context.eval (webpack://cyautomation/./cypress/e2e/T1_Health_check.cy.js:49:6)",
+                "diff": null
+              },
+              "uuid": "1fb56c9f-2d60-426c-848d-10e2a9845202",
+              "parentUUID": "274c0362-9f76-4c35-b0c7-59ac98e148ac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "804ff443-c0eb-4caf-afd0-f806e5c3f00b",
+            "c1028886-ab1b-43c9-9ffd-6072188f8f9c",
+            "7ae3fc72-8f06-4e02-96df-44c70b569f0c",
+            "0427d534-9291-41cd-a4a3-a76bb26c79b1",
+            "513a3a3c-4751-46c4-97df-2a78c4e81490",
+            "7cc53cb2-2fc4-4665-b899-f8dd02e6334f",
+            "a044f988-00ca-4117-8b91-76d4fe0d1524",
+            "31df2674-82b8-4790-af04-72df4e09d903",
+            "1fb56c9f-2d60-426c-848d-10e2a9845202"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6208,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
