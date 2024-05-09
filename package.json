@@ -101,6 +101,7 @@
     "jsbn": "^0.1.1",
     "json-schema": "^0.4.0",
     "json-stringify-safe": "^5.0.1",
+    "json2xls": "^0.1.2",
     "jsonfile": "^6.1.0",
     "jsprim": "^2.0.2",
     "lazy-ass": "^1.6.0",
@@ -173,11 +174,12 @@
     "which": "^2.0.2",
     "wrap-ansi": "^7.0.0",
     "wrappy": "^1.0.2",
+    "xlsx": "^0.18.5",
     "yallist": "^4.0.0",
     "yauzl": "^2.10.0"
   },
   "devDependencies": {
-    "cypress": "^13.8.0",
+    "cypress": "^13.8.1",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.8.2"
   }
