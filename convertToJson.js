@@ -3,11 +3,12 @@ const xlsx = require('xlsx');
 // Read JSON test results
 const testResults = require('./mochawesome-report/mochawesome.json');
 // Extract relevant information
-console.log(testResults.results[0].suites)
+//console.log(testResults.results[0].suites)
 const formattedData = testResults.results[0].suites[0].tests.map(test => ({
-  name: test.title,
-  status: test.state,
-  duration: test.duration
+  "APP Name" : test.fullTitle,
+  "Test URLS": test.title,
+  "status": test.state,
+  "duration": test.duration
 }));
 // Create a new workbook
 const workbook = xlsx.utils.book_new();

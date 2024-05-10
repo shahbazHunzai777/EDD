@@ -30,7 +30,6 @@ const login = (url) => {
 
 
   cy.get(customPortalTemplate).submit();
-  cy.wait(5000)
 };
 
 Cypress.on('uncaught:exception', (err, runnable) => {
