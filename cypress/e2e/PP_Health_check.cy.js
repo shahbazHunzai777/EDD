@@ -20,12 +20,12 @@ const login = (url) => {
   cy.get(customPortalTemplate)
     .find('#input28')
     .eq(0)
-    .type(user.user2.username)
+    .type('PERF_SCPEXTA_19408@scpperf.com')
     .trigger('input');
 
   cy.get(customPortalTemplate)
     .find('#input36')
-    .type(user.user2.password)
+    .type('California@1')
     .trigger('focus');
 
 
