@@ -14,7 +14,6 @@ const urls = [
 ];
 
 const login = (url) => {
-  cy.visit(url);
   cy.visit(loginUrl);
 
   cy.get(customPortalTemplate)
@@ -27,7 +26,6 @@ const login = (url) => {
     .find('#input36')
     .type('California@1')
     .trigger('focus');
-
 
   cy.get(customPortalTemplate).submit();
 };
@@ -50,9 +48,11 @@ describe('Health Check', () => {
                 expect(response.status).to.eq(200);
               });
             });
+        })
+        .then(() => {
+          cy.screenshot(`after-login-${url.split('/').pop()}`);
         });
     });
   });
 });
-
 
