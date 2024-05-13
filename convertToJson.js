@@ -4,11 +4,12 @@ const xlsx = require('xlsx');
 const testResults = require('./cypress/reports/json/mochawesome.json');
 // Extract relevant information
 //console.log(testResults.results[0].suites)
-const formattedData = testResults.results[0].suites[0].tests.map(test => ({
-  "APP Name" : "OAG Preproduction Health Check",
+const appName = ['CUBS PPR PERF', 'SDIO PPR PERF', 'CUBS PPR STG', 'SDIO PPR STG', 'SDIO PPR STG', 'AdminUtil', 'CUBS PPR UAT', 'SDIO PPR UAT'];
+const formattedData = testResults.results[0].suites[0].tests.map((test, index) => ({
+  "APP Name" : appName[index], 
   "Test URLS": test.title.replace('Visit ', ''),
   "Status": test.state,
-  "Duration (ms)": test.duration
+  "Duration in (ms)": test.duration
 }));
 // Create a new workbook
 const workbook = xlsx.utils.book_new();
