@@ -1,14 +1,14 @@
 const fs = require('fs');
 const xlsx = require('xlsx');
 // Read JSON test results
-const testResults = require('./mochawesome-report/mochawesome.json');
+const testResults = require('./cypress/reports/json/mochawesome.json');
 // Extract relevant information
 //console.log(testResults.results[0].suites)
 const formattedData = testResults.results[0].suites[0].tests.map(test => ({
-  "APP Name" : test.fullTitle,
-  "Test URLS": test.title,
-  "status": test.state,
-  "duration": test.duration
+  "APP Name" : "OED Preproduction Health Check",
+  "Test URLS": test.title.replace('Visit ', ''),
+  "Status": test.state,
+  "Duration (ms)": test.duration
 }));
 // Create a new workbook
 const workbook = xlsx.utils.book_new();
