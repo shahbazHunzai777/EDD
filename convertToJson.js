@@ -5,7 +5,7 @@ const testResults = require('./cypress/reports/json/mochawesome.json');
 // Extract relevant information
 //console.log(testResults.results[0].suites)
 const formattedData = testResults.results[0].suites[0].tests.map(test => ({
-  "APP Name" : "OED Preproduction Health Check",
+  "APP Name" : "OAG Preproduction Health Check",
   "Test URLS": test.title.replace('Visit ', ''),
   "Status": test.state,
   "Duration (ms)": test.duration
