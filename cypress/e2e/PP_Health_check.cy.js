@@ -38,20 +38,22 @@ describe('Health Check', () => {
   urls.forEach((url) => {
     it(`Visit ${url}`, () => {
       login(url);
-      cy.visit(url);
-      cy.get('a')
-        .each(($el) => {
-          cy.wrap($el)
-            .should('have.attr', 'href')
-            .then((subUrl) => {
-              cy.request(subUrl).then((response) => {
-                expect(response.status).to.eq(200);
+      cy.visit(url).then(() => {
+        cy.wait(2000);
+        cy.get('a')
+          .each(($el) => {
+            cy.wrap($el)
+              .should('have.attr', 'href')
+              .then((subUrl) => {
+                cy.request(subUrl).then((response) => {
+                  expect(response.status).to.eq(200);
+                });
               });
-            });
-        })
-        .then(() => {
-          cy.screenshot(`after-login-${url.split('/').pop()}`);
-        });
+          })
+          .then(() => {
+            cy.screenshot(`after-login-${url.split('/').pop()}`);
+          });
+      });
     });
   });
 });
