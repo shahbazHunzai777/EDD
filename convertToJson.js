@@ -1,13 +1,13 @@
 const fs = require('fs');
 const xlsx = require('xlsx');
 // Read JSON test results
-const testResults = require('./cypress/reports/json/mochawesome.json');
+const testResults = require('./cypress/reports/index.json');
 // Extract relevant information
 //console.log(testResults.results[0].suites)
-const appName = ['CUBS PPR PERF', 'SDIO PPR PERF', 'CUBS PPR STG', 'SDIO PPR STG', 'SDIO PPR STG', 'AdminUtil', 'CUBS PPR UAT', 'SDIO PPR UAT'];
+const appName = ['UIO PPR PERF', 'SDIO PPR PERF', 'UIO PPR STG', 'SDIO PPR STG', 'SDIO PP04', 'BOS', 'UIO PPR UAT', 'SDIO PPR UAT', 'eservicest1'];
 const formattedData = testResults.results[0].suites[0].tests.map((test, index) => ({
   "APP Name" : appName[index], 
-  "Test URLS": test.title.replace('Visit ', ''),
+  "Test URLS": test.title.replace('Visits ', ''),
   "Status": test.state,
   "Duration in (ms)": test.duration
 }));
