@@ -24,8 +24,8 @@ describe('Authentication flow', function () {
 
   let allUrlsChecked = false;
 
-  urls.forEach((url) => {
-    it(`Visits ${url} and logs in`, () => {
+  urls.forEach((url, index) => {
+    it(`Visits ${url} and logs in`, function () {
       cy.visit(url)
         .wait(10000);
 
@@ -62,16 +62,10 @@ describe('Authentication flow', function () {
       });
 
       cy.url().should('include', '/s/');
-
-      if (url === urls[urls.length - 1]) {
-        allUrlsChecked = true;
-      }
     });
   });
 
-  afterEach(() => {
-    if (allUrlsChecked) {
-      Cypress.runner.stop();
-    }
+  afterEach(function () {
+    cy.screenshot();
   });
 });
