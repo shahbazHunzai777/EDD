@@ -22,12 +22,10 @@ describe('Authentication flow', function () {
     'https://eservicest1.network1.corp.edd.ca.gov/eservicest1/Protected/RDS/BOSEnrollment/Landingpage'
   ];
 
-  let allUrlsChecked = false;
-
   urls.forEach((url, index) => {
     it(`Visits ${url} and logs in`, function () {
       cy.visit(url)
-        .wait(10000);
+        .wait(1000);
 
       cy.get(customPortalTemplate)
         .find('.form-control.edd-input')
@@ -49,7 +47,7 @@ describe('Authentication flow', function () {
         .click()
         .should('be.visible');
 
-      cy.wait(10000);
+      cy.wait(12000);
 
       cy.request({
         method: 'GET',
