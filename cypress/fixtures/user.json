@@ -2,5 +2,10 @@
   "user": {
     "username": "SCPTESTAUTO+039@Gmail.com",
     "password": "California@2"
+  }, 
+
+  "user1": {
+    "username": "PERF_SCPEXTA_19408@scpperf.com",
+    "password": "California@1"
   }
 }
