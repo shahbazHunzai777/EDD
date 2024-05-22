@@ -5,3 +5,7 @@
 // Cypress.Commands.add('sendEmail', () => {
 //     sendEmail();
 // });
+
+Cypress.Commands.add('loginSession', (email, password) => {
+    cy.visit('https://sdioextpp1.edd.ca.gov')
+});

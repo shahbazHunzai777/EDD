@@ -11,21 +11,16 @@ describe('Authentication flow', function () {
   });
 
   const urls = [
-    'https://sdioextpp1.edd.ca.gov/DIAExtPP1',
-    'https://sdioextpp3.edd.ca.gov/DIAExtPP3',
-    'https://sdioextpp4.edd.ca.gov/DIAExtPP4',
-    'https://sdioextpp2.edd.ca.gov/DIAExtPP2',
+    'https://sdioextpp1.edd.ca.gov/DIAExtPP1/Pages/Public/ExternalUser/SDIOnlineLandingPage.aspx',
+    'https://sdioextpp3.edd.ca.gov/DIAExtPP3/Pages/Public/ExternalUser/SDIOnlineLandingPage.aspx',
+    'https://sdioextpp4.edd.ca.gov/DIAExtPP4/Pages/Public/ExternalUser/SDIOnlineLandingPage.aspx',
+    'https://sdioextpp2.edd.ca.gov/DIAExtPP2/Pages/Public/ExternalUser/SDIOnlineLandingPage.aspx',
   ];
 
   urls.forEach((url, index) => {
     it(`Visits ${url} and logs in`, function () {
-      // Replace with the actual endpoint
-      cy.intercept('GET', '**//DIAExtPP3/Pages/Public/ExternalUser/SDIOnlineLandingPage.aspx').as('pageLoad'); // Adjust this path to match your application
-
-      cy.visit(url);
-
-      // Wait for the specific request to complete
-      cy.wait(1000);
+      cy.visit(url)
+        .wait(1000);
 
       cy.get(customPortalTemplate)
         .find('.form-control.edd-input')
@@ -47,20 +42,23 @@ describe('Authentication flow', function () {
         .click()
         .should('be.visible');
 
-      cy.screenshot();
-      cy.get('#main_cmdClaimantRegistration').screenshot();
+      cy.origin(
+            url,
+            () => {
+              cy.get('#main_cmdClaimantRegistration')
+              cy.screenshot();
+            })
 
-      cy.url().then((loggedInUrl) => {
-        cy.request({
-          method: 'GET',
-          url: loggedInUrl + '/rest/v1/',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }).then((response) => {
-          expect(response.status).to.equal(200);
-        });
+      cy.request({
+        method: 'GET',
+        url: url + '/rest/v1/',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(response => {
+        expect(response.status).to.equal(200);
       });
     });
   });
 });
+

@@ -12,8 +12,8 @@
 
 //   const urls = [
 //     'https://uioperfrf.edd.ca.gov/uioperfrf/Pages/Public/ExternalUser/UIOnlineLandingPage.aspx',
-//     'https://uioSTGrf.edd.ca.gov/uioSTGrf/Pages/Public/ExternalUser/UIOnlineLandingPage.aspx',
-//     'https://uiouatRF.edd.ca.gov/uiouatrf/Pages/Public/ExternalUser/UIOnlineLandingPage.aspx',
+//     //'https://uioSTGrf.edd.ca.gov/uioSTGrf/Pages/Public/ExternalUser/UIOnlineLandingPage.aspx',
+//     //'https://uiouatRF.edd.ca.gov/uiouatrf/Pages/Public/ExternalUser/UIOnlineLandingPage.aspx',
 //   ];
 
 //   urls.forEach((url, index) => {

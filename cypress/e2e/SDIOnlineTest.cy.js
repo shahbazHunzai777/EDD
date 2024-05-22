@@ -11,11 +11,13 @@
 //   });
 
 //   const urls = [
-//     'https://eservicespp.edd.ca.gov/eservicespp/Secure/RDS/BOSeServices/',
-//     //'https://eservicest1.network1.corp.edd.ca.gov/eservicest1/Protected/RDS/BOSEnrollment/Landingpage'
+//     //'https://sdioextpp1.edd.ca.gov/DIAExtPP1/Pages/Public/ExternalUser/SDIOnlineLandingPage.aspx',
+//     //'https://sdioextpp3.edd.ca.gov/DIAExtPP3/Pages/Public/ExternalUser/SDIOnlineLandingPage.aspx',
+//     //'https://sdioextpp4.edd.ca.gov/DIAExtPP4/Pages/Public/ExternalUser/SDIOnlineLandingPage.aspx',
+//     'https://sdioextpp2.edd.ca.gov/DIAExtPP2/Pages/Public/ExternalUser/SDIOnlineLandingPage.aspx',
 //   ];
 
-//   urls.forEach((url) => {
+//   urls.forEach((url, index) => {
 //     it(`Visits ${url} and logs in`, function () {
 //       cy.visit(url)
 //         .wait(1000);
@@ -40,11 +42,12 @@
 //         .click()
 //         .should('be.visible');
 
-        
+//       cy.screenshot()
 //       cy.origin(
 //         url,
 //         () => {
-//           cy.get('#action_6').contains().click()
+//           //cy.get('#main_cmdClaimantRegistration')
+//           cy.get('h2').should('contain', 'Service Unavailable')
 //           cy.screenshot();
 //         })
 
@@ -60,6 +63,4 @@
 //     });
 //   });
 // });
-
-
 
