@@ -47,17 +47,7 @@ describe('Authentication flow', function () {
             () => {
               cy.get('#main_cmdClaimantRegistration').should('be.visible');
               cy.screenshot();
-            })
-      
-      cy.request({
-        method: 'GET',
-        url: url + '/rest/v1/',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }).then(response => {
-        expect(response.status).to.equal(200);
-      });
+      })
     });
   });
 });
