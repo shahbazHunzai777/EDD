@@ -12,10 +12,10 @@
 
 //   const urls = [
 //     'https://eservicespp.edd.ca.gov/eservicespp/Secure/RDS/BOSeServices/',
-//     //'https://eservicest1.network1.corp.edd.ca.gov/eservicest1/Protected/RDS/BOSEnrollment/Landingpage'
+//     'https://eservicest1.network1.corp.edd.ca.gov/eservicest1/Protected/RDS/BOSEnrollment/Landingpage'
 //   ];
 
-//   urls.forEach((url) => {
+//   urls.forEach((url, index) => {
 //     it(`Visits ${url} and logs in`, function () {
 //       cy.visit(url)
 //         .wait(1000);
@@ -40,26 +40,13 @@
 //         .click()
 //         .should('be.visible');
 
-        
 //       cy.origin(
-//         url,
-//         () => {
-//           cy.get('#action_6').contains().click()
-//           cy.screenshot();
-//         })
-
-//       cy.request({
-//         method: 'GET',
-//         url: url + '/rest/v1/',
-//         headers: {
-//           'Content-Type': 'application/json'
-//         }
-//       }).then(response => {
-//         expect(response.status).to.equal(200);
-//       });
+//             url,
+//             () => {
+//               cy.get('#action_6').should('be.visible');
+//               cy.screenshot();
+//             })
 //     });
 //   });
 // });
-
-
 
