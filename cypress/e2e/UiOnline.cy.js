@@ -53,13 +53,6 @@ describe('Authentication flow', function () {
             url,
             () => {
             cy.get('#contentMain_ucExternalUserLoginUserNameTemplate_btnSubmit').should('be.visible');
-            cy.screenshot({
-              capture: 'viewport',
-            });
-            cy.wait(1000)
-            cy.screenshot();
-            cy.wait(1000)
-            cy.screenshot()
           });
        });
      });

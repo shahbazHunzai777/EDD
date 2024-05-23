@@ -39,12 +39,13 @@ describe('Authentication flow', function () {
         .find('[type="submit"]')
         .click()
         .should('be.visible');
+        cy.screenshot();
 
       cy.origin(
             url,
             () => {
               cy.get('#action_6').should('be.visible');
-              cy.screenshot();
+             
             })
     });
   });

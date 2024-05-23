@@ -41,13 +41,13 @@ describe('Authentication flow', function () {
         .find('[type="submit"]')
         .click()
         .should('be.visible');
+        cy.screenshot();
 
       cy.origin(
             url,
             () => {
               cy.get('#main_cmdClaimantRegistration').should('be.visible');
-              cy.screenshot();
-      })
+           })
     });
   });
 });
