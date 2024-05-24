@@ -12,11 +12,6 @@ module.exports = defineConfig({
 
   },
   e2e: {
-    // pageLoadTimeout: 120000,
-    // defaultCommandTimeout: 30000, 
-    // requestTimeout: 30000,
-    // responseTimeout: 30000,
-    // experimantalSessionAndOrigin: true,
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);
     },

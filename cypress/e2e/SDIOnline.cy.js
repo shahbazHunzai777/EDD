@@ -47,6 +47,7 @@ describe('Authentication flow', function () {
             url,
             () => {
               cy.get('#main_cmdClaimantRegistration').should('be.visible');
+              //cy.screenshot();
            })
     });
   });
